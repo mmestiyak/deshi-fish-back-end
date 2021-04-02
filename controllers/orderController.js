@@ -5,7 +5,7 @@ exports.placeOrder = async (req, res) => {
     await new Order(req.body).save();
     res.send('Order Placed Successfully!');
   }catch(err){
-    console.log(err)
+    res.status(500).send(err)
   }
 }
 

@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const orderSchema= mongoose.Schema({
   customerEmail: {
     type: String,
+    trim: true,
     required: "add customer email"
   },
   name: {
