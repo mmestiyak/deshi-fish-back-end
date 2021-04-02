@@ -28,7 +28,7 @@ mongoose.connect(process.env.DATABASE,
 })
 
 // STARTING OUT SERVER
-app.listen( 7777 || process.env.PORT , (err) => { 
+app.listen( process.env.PORT || 80 , (err) => { 
   if(err) console.log(`SERVER FAILED TO RUN 🐛 ${err}`)
   console.log(`😎 server running successfully!`)
 })
